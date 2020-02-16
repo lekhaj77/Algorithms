@@ -8,16 +8,16 @@ public class EmployeeLinkedList {
     public void addToFront(Employee employee) {
         //adding a new node
         EmployeeNode node = new EmployeeNode(employee);
-        //setting the node as head
+        //pointing to the current head
         node.setNext(head);
 
-
+        //setting the node as head
         head = node;
         size++;
     }
 
     public EmployeeNode removeFromFront() {
-        if (isEmpty()) {
+        if (head == null) {
             return null;
         }
 
